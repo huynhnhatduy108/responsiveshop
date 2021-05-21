@@ -1,18 +1,118 @@
 /* Mobile & tablet */
-@media (max-width: 1023px){
- .hide-on-mobile-tablet{
-     display: none;
- }
+@media (max-width: 1023px) {
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+  .header {
+    height: 68px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+  .header__search {
+    margin-top: 0;
+    padding-top: 14px;
+  }
+  .header__sort-bar {
+    display: flex;
+  }
+
+  .header__cart {
+    width: 80px;
+  }
+  .header__cart-noti {
+    right: 15px;
+  }
+  .header__cart_list {
+    right: 0;
+  }
+  .content {
+    margin-top: 110px;
+  }
+  
 }
 /* Table */
-@media (min-width: 740px) and (max-width:1023px){
-    .hide-on-mobile-tablet{
-        display: none;
-    }
+@media (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+  .pagination-list{
+    padding-left:0;
+  }
+  .header__mobile_search{
+    display: none;
+  }
 }
 /* Mobile */
-@media (min-width: 739px){
-    .hide-on-mobile{
-        display: none;
+@media (max-width: 739px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .header__search {
+    justify-content: space-between;
+  }
+  .header__logo,
+  .header__cart {
+    width: unset;
+  }
+  .header__mobile_search-icon {
+    padding: 0 12px;
+  }
+  .header__cart-noti {
+    right: 5px;
+  }
+  .header__search {
+    padding: 8px;
+  }
+  .header__cart {
+    padding-right: 20px;
+  }
+  .header__input {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 50px;
+    top: 64px;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    animation: mobileSearch linear 0.2s;
+    display: none;
+  }
+  @keyframes mobileSearch {
+    from {
+      opacity: 0;
+      top: 36px;
     }
+    to {
+      opacity: 1;
+      top: 64px;
+    }
+  }
+
+  .header__input-history {
+    position: fixed;
+    top: 115px;
+    width: 100%;
+  }
+  .pagination-item{
+    margin:0;
+  }
+  .pagination-link{
+    line-height: 30px;
+    font-size: 1.4rem;
+  }
+ .app-content{
+    margin:0;
+  }
+  .pagination-list{
+    padding-left:0;
+  }
+  .header__mobile_search{
+    display: block;
+  }
+  .footer_content{
+    padding:0 16px;
+  }
 }
